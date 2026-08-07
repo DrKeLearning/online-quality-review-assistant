@@ -14,7 +14,7 @@ For every review query or standard reference, execute the following 5-step diagn
 
 ### Step 1: Standard & Rule Extraction
 * Identify the target Standard ID (e.g., GR-S1.1, GR-S3.2). 
-* Extract its **Summary**, **Passing Threshold**, **Scope of Implementation**, **Aligned Elements**, and **Violating Examples** from the USF Green & Gold Rubrics.
+* Extract its **Summary**, **Passing Threshold**, **Scope of Implementation**, **Aligned Elements**, and **Violating Examples** from the OQRA Knowledgebase v2.0.
 
 ### Step 2: Course Evidence Gathering
 * Search all uploaded course artifacts for direct, observable evidence matching the standard's required elements and scope.
