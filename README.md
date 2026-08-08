@@ -13,7 +13,7 @@ Engineered with a **zero-assumption diagnostic pipeline**, OQRA minimizes AI hal
 
 ## 📋 Table of Contents
 - [Key Features](#-key-features)
-- [Diagnostic Pipeline Architecture](#%EF%B8%8F-diagnostic-pipeline-architecture)
+- [Diagnostic Pipeline Architecture](#-diagnostic-pipeline-architecture)
 - [Knowledgebase & Rubric Framework](#-knowledgebase--rubric-framework)
 - [Repository Structure](#-repository-structure)
 - [Getting Started](#-getting-started)
