@@ -115,26 +115,51 @@ Inject the system prompt into your API call payload (e.g., Gemini API, OpenAI AP
 
 ---
 
+## **📊 Knowledgebase Schema for Specific Review Standards**
+
+All specific review standards follow the scheme belowt:
+
+* **ID**: [GR-S1.1] *— GR (Green Rubric), S (standard), 1.1 (standard number)* 
+* **Category**: [Course Overview and Introduction] *— Category of the General Standard.*
+* **Summary**: [a headline the standard]  *— A single-line or sentence headline summarizing the standard.*  
+* **Rubric Type**: [Green / Gold]  *— Taken from the USF Green and Gold Online Rubrics.*  
+* **Points**: [1pt / 2pts / 3pts] *— Taken from the USF Green and GOld Online Rubrics.* 
+* **Priority Weight**: [Low / Medium / High] *— Corresponds to the points. Used for the internal processing.*  
+* **Scope of Implementation**: [Enter the scope]  *— Enter where the bot should look at to find evidence for the standard (e.g., orientation module, Course Overview page).*  
+* **Passing Threshold**: [Enter the threshold to meet the standard]  *— Indicate how many instances of the standard a course must have and how many percent of them must meet the evaluation criteria (e.g., Minimum 1 instance providing clear "getting started" instructions, course orientation, and navigational guidance on the course home page or orientation module at the beginning of the course).*  
+* **Annotation**: [A full elaboration on the standard]  *— Adapted from the USF Green and Gold Online Rubrics with further elaborations and clarifications for AI processing.*   
+* **Rationales**: [Rationales for the standard]  *— The bot references this as evidence to suppor its feedback.*   
+* **Note to Reviewers**: [Instructions for reviewers]  *— Adapted from the USF Green and Gold Online Rubrics with further elaborations and clarifications for AI processing.* 
+* **Hybrid Courses**: [Special considerations for hybrid courses  N/A]  *— Adapted from the USF Green and Gold Online Rubrics with further elaborations and clarifications for AI processing.*    
+* **Competency-Based Courses**: [Special considerations for competency-based courses / N/A]  *— Adapted from the USF Green and Gold Online Rubrics with further elaborations and clarifications for AI processing.*  
+* **Synchronous Courses**: [Special considerations for synchronous courses / N/A]  *— Adapted from the USF Green and Gold Online Rubrics with further elaborations and clarifications for AI processing.*   
+* **Aligned Elements**:  
+  * [A specific way the standard can be implemented]  *— The bot references it to increase accuracy and validity of evaluation. This section lists 10 or more examples (one example per list item).*    
+* **Violating Examples**:  
+  * [A specific course design example]  *— The bot references it to increase accuracy and validity of evaluation. This section lists up to 10 examples (one example per list item).*
+
+
+
 ## **📊 Standardized Output Schema**
 
 OQRA outputs diagnostic evaluations using a consistent format:
 
-Markdown  
-\#\#\# \[Standard ID\]: \[Standard Title/Summary\]  
-\* **\*\*Category\*\***: \[Category Name\]  
-\* **\*\*Rubric Type\*\***: \[Green / Gold\] | **\*\*Points\*\***: \[Xpts\] | **\*\*Priority Weight\*\***: \[High/Medium/Low\]  
-\* **\*\*Evaluation Status\*\***: **\*\*\[MET | NOT MET | INSUFFICIENT DATA\]\*\***
+```text
+### [Standard ID]: [Standard Title/Summary]
+* **Category**: [Category Name]
+* **Rubric Type**: [Green / Gold] | **Points**: [Xpts] | **Priority Weight**: [High/Medium/Low]
+* **Evaluation Status**: **[MET | NOT MET | INSUFFICIENT DATA]**
 
-\#\#\#\# 1\. Evidence & Findings  
-\* \[Direct citation or quote from uploaded documents supporting the finding, referencing file name/location\]  
-\* \[Clear explanation of how the evidence satisfies or fails the Passing Threshold\]
+#### 1. Evidence & Findings
+* [Direct citation or quote from uploaded documents supporting the finding, referencing file name/location]
+* [Clear explanation of how the evidence satisfies or fails the Passing Threshold]
 
-\#\#\#\# 2\. Diagnostic Analysis & Gaps  
-\* \[Brief analysis comparing course design against Aligned Elements or Violating Examples\]
+#### 2. Diagnostic Analysis & Gaps
+* [Brief analysis comparing course design against Aligned Elements or Violating Examples]
 
-\#\#\#\# 3\. Actionable Recommendations (Required if NOT MET or INSUFFICIENT DATA)  
-\* \[Specific, step-by-step instructional design advice to align the course with rubric criteria\]
-
+#### 3. Actionable Recommendations (Required if NOT MET or INSUFFICIENT DATA)
+* [Specific, step-by-step instructional design advice to align the course with rubric criteria]
+```
 ---
 
 ## **🔄 Versioning & Changelog**
@@ -144,9 +169,12 @@ This project uses [Semantic Versioning](https://semver.org/).
 ### **v2.0.0 (Current Version)**
 
 * 🚀 **Diagnostic Protocol:** Added an explicit 5-step evaluation algorithm to eliminate non-grounded outputs.  
-* 🏷️ **ID Tracking:** Integrated explicit GR-S\#.\# and GO-S\#.\# indexing across all rubrics.  
+* 🏷️ **ID Tracking:** Integrated explicit GR-S\#.\# and GO-S\#.\# indexing across all rubrics.
+* 🔣 **Passing Threshhold:** Explicit rating thresholds to determine "Met" or "Not Met" consistently.
+* 📃 **Aligned & Violating Examples:** Expanded examples of meeting or failing to meet the review criteria for each specific standard.
 * 📏 **Character Constraint Removal:** Removed rigid character caps that led to cut-off citations and incomplete feedback.  
 * 📑 **Schema Normalization:** Added standardized outputs for seamless downstream automation.
+* 📄 **Markdown Format:** Shifted from Google Doc to markdown file (.md).
 
 ---
 
