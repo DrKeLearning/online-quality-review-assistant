@@ -36,7 +36,7 @@ Engineered with a **zero-assumption diagnostic pipeline**, OQRA minimizes AI hal
 
 ---
 
-## ⚙️ Diagnostic Pipeline Architecture
+## **⚙️ Diagnostic Pipeline Architecture**
 
 OQRA operates using a structured 5-step diagnostic loop to evaluate course artifacts:
 
