@@ -1,4 +1,4 @@
-# OQRA — Online Quality Review Assistant 🤖📚
+# OQRA–Online Quality Review Assistant 🤖📚
 
 [![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/your-username/oqra)
 [![Rubric Framework](https://img.shields.io/badge/Framework-USF%20Green%20%26%20Gold%20v2.0-emerald.svg)](#knowledgebase--rubric-framework)
