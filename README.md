@@ -100,6 +100,12 @@ OQRA's system prompt and knowledgebase can be deployed in multiple environments:
 > 1. Copy the contents of system\_prompts/oqra\_system\_prompt\_v2.0.md into the **Instructions** / **System Prompt** field.
 > 2. Build your own knowledgebase file by modifying either knowledgebase/oqra\_knowledgebase\_v2.0.md or oqra\_knowledgebase\_schema.md and upload it as **Knowledgebase Files**.
 
+Watch the quick setup video below for details: 
+
+https://github.com/user-attachments/assets/fa31cd62-4d53-465a-a24b-440056eabef8
+
+
+
 #### **2\. LLM API / System Message Integration**
 
 Inject the system prompt into your API call payload (e.g., Gemini API, OpenAI API, Anthropic Claude API) alongside your rubric context.
